@@ -24,7 +24,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+- [x] Added a background and custom font.
 
 ## Video Walkthrough
 
@@ -42,6 +43,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 ## Notes
 
 Describe any challenges encountered while building the app.
+
 Trying to figure out how to fully implement the intents when an entry is clicked was the most difficult part. Part of the issue I was having was forgetting to added the different activies to the AndroidManifest file.
 
 ## License
