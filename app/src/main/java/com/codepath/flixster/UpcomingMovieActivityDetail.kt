@@ -1,9 +1,7 @@
 package com.codepath.flixster
 
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.RatingBar
@@ -33,6 +31,8 @@ class UpcomingMovieActivityDetail : AppCompatActivity()
 		movieReleaseDate.text = "Release Date: ${upcomingMovie.upcomingMovieReleaseDate}"
 
 		movieRating.rating = upcomingMovie.upcomingMovieVoteAverage!!.toFloat()
+
+		Log.d("RATING:", (upcomingMovie.upcomingMovieVoteAverage).toString())
 
 		movieVotes.text = "${upcomingMovie.upcomingMovieVoteCount.toString()} votes"
 

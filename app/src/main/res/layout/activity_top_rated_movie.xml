@@ -8,13 +8,14 @@
 		android:id="@+id/top_rated_movie_title_activity"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="14dp"
+		android:fontFamily="@font/bebas_regular"
 		android:text="@string/top_rated_movies"
 		android:textAppearance="@style/TextAppearance.AppCompat.Large"
-		android:textSize="24sp"
-		app:layout_constraintStart_toStartOf="parent"
+		android:textSize="34sp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		/>
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
 	<FrameLayout
 		android:id="@+id/top_rated_movies_activity"
