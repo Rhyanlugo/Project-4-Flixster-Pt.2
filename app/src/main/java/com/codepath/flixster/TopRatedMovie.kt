@@ -30,7 +30,7 @@ data class TopRatedMovie(
 	val topRatedMovieVoteCount: Int?,
 
 	@SerialName("vote_average")
-	val topRatedMovieVoteAverage: Double?
+	val topRatedMovieVoteAverage: Float?
 ) : java.io.Serializable
 {
 	val moviePosterURL = "https://image.tmdb.org/t/p/w500${topRatedMoviePoster}"

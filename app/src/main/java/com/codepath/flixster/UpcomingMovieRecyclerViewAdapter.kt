@@ -13,23 +13,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
-private const val TAG = "TopRatedMovieRecyclerViewAdapter/"
-const val TOP_RATED_MOVIE_EXTRA = "TOP_RATED_MOVIE_EXTRA"
+private const val TAG = "UpcomingMovieRecyclerViewAdapter/"
+const val UPCOMING_MOVIE_EXTRA = "UPCOMING_MOVIE_EXTRA"
 
-class TopRatedMovieRecyclerViewAdapter(
+class UpcomingMovieRecyclerViewAdapter(
 	private val context: Context,
-	private val topRatedMovies: List<TopRatedMovie>
-) : RecyclerView.Adapter<TopRatedMovieRecyclerViewAdapter.ViewHolder>()
+	private val upcomingMovies: List<UpcomingMovie>
+) : RecyclerView.Adapter<UpcomingMovieRecyclerViewAdapter.ViewHolder>()
 {
 
 	inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
 		View.OnClickListener
 	{
 
-		private val topRatedMovieImageView =
-			itemView.findViewById<ImageView>(R.id.top_rated_movie_poster)
-		private val topRatedMovieTitleTextView =
-			itemView.findViewById<TextView>(R.id.top_rated_movie_title)
+		private val upcomingMovieMovieImageView =
+			itemView.findViewById<ImageView>(R.id.upcoming_movie_poster)
+		private val upcomingMovieTitleTextView =
+			itemView.findViewById<TextView>(R.id.upcoming_movie_title)
 
 		init
 		{
@@ -38,45 +38,45 @@ class TopRatedMovieRecyclerViewAdapter(
 
 		override fun onClick(v: View?)
 		{
-			val topRatedMovie = topRatedMovies[absoluteAdapterPosition]
+			val upcomingMovie = upcomingMovies[absoluteAdapterPosition]
 
-			val intent = Intent(context, TopRatedMovieActivityDetail::class.java)
-			intent.putExtra(TOP_RATED_MOVIE_EXTRA, topRatedMovie)
+			val intent = Intent(context, UpcomingMovieActivityDetail::class.java)
+			intent.putExtra(UPCOMING_MOVIE_EXTRA, upcomingMovie)
 			val option = ActivityOptionsCompat.makeSceneTransitionAnimation(
 				context as Activity,
-				topRatedMovieImageView,
-				"top_rated_movie_poster"
+				upcomingMovieMovieImageView,
+				"upcoming_movie_poster"
 			)
 			context.startActivity(intent, option.toBundle())
 		}
 
-		fun bind(topRatedMovie: TopRatedMovie)
+		fun bind(upcomingMovie: UpcomingMovie)
 		{
-			topRatedMovieTitleTextView.text = topRatedMovie.topRatedMovieTitle
+			upcomingMovieTitleTextView.text = upcomingMovie.upcomingMovieTitle
 
 			Glide.with(context)
-				.load(topRatedMovie.moviePosterURL)
+				.load(upcomingMovie.moviePosterURL)
 				.placeholder(android.R.drawable.ic_menu_gallery)
 				.transform(RoundedCorners(50))
-				.into(topRatedMovieImageView)
+				.into(upcomingMovieMovieImageView)
 		}
 	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
 	{
 		val view =
-			LayoutInflater.from(context).inflate(R.layout.fragment_top_rated_movie, parent, false)
+			LayoutInflater.from(context).inflate(R.layout.fragment_upcoming_movie, parent, false)
 		return ViewHolder(view)
 	}
 
 	override fun onBindViewHolder(holder: ViewHolder, position: Int)
 	{
-		val topRatedMovie = topRatedMovies[position]
-		holder.bind(topRatedMovie)
+		val upcomingMovie = upcomingMovies[position]
+		holder.bind(upcomingMovie)
 	}
 
 	override fun getItemCount(): Int
 	{
-		return topRatedMovies.size
+		return upcomingMovies.size
 	}
 }

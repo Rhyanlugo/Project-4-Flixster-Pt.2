@@ -2,23 +2,24 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/upcoming_movie_details"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:layout_margin="14dp">
 
 	<ImageView
-		android:id="@+id/upcoming_movie_poster"
+		android:id="@+id/upcoming_movie_poster_detail"
 		android:layout_width="250dp"
 		android:layout_height="350dp"
 		tools:srcCompat="@tools:sample/avatars"
 		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_title"
+		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_title_detail"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		/>
 
 	<TextView
-		android:id="@+id/upcoming_movie_title"
+		android:id="@+id/upcoming_movie_title_detail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Movie Title"
@@ -27,13 +28,13 @@
 		android:layout_marginTop="4dp"
 		android:layout_marginBottom="4dp"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_poster"
-		app:layout_constraintBottom_toTopOf="@id/upcoming_release_date"
+		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_poster_detail"
+		app:layout_constraintBottom_toTopOf="@id/upcoming_release_date_detail"
 
 		/>
 
 	<TextView
-		android:id="@+id/upcoming_release_date"
+		android:id="@+id/upcoming_release_date_detail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Release Date"
@@ -41,12 +42,12 @@
 		android:layout_marginTop="5dp"
 		android:layout_marginBottom="8dp"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_title"
-		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_rating"
+		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_title_detail"
+		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_rating_detail"
 		/>
 
 	<RatingBar
-		android:id="@+id/upcoming_movie_rating"
+		android:id="@+id/upcoming_movie_rating_detail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="8dp"
@@ -54,12 +55,12 @@
 		android:stepSize="0.5"
 		style="@style/Widget.AppCompat.RatingBar.Indicator"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/upcoming_release_date"
-		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_votes"
+		app:layout_constraintTop_toBottomOf="@id/upcoming_release_date_detail"
+		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_votes_detail"
 		/>
 
 	<TextView
-		android:id="@+id/upcoming_movie_votes"
+		android:id="@+id/upcoming_movie_votes_detail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Votes"
@@ -67,19 +68,19 @@
 		android:layout_marginTop="4dp"
 		android:layout_marginBottom="8dp"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_rating"
-		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_description"
+		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_rating_detail"
+		app:layout_constraintBottom_toTopOf="@id/upcoming_movie_description_detail"
 		/>
 
 	<TextView
-		android:id="@+id/upcoming_movie_description"
+		android:id="@+id/upcoming_movie_description_detail"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Movie Description"
 		android:layout_marginStart="8dp"
 		android:layout_marginTop="8dp"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_votes"
+		app:layout_constraintTop_toBottomOf="@id/upcoming_movie_votes_detail"
 		/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

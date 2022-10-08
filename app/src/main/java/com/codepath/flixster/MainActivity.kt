@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity()
 
 		val supportFragmentManagerTopRatedMovie = supportFragmentManager
 		val fragmentTransactionTopRatedMovie = supportFragmentManagerTopRatedMovie.beginTransaction()
-		fragmentTransactionTopRatedMovie.replace(R.id.top_rated_movies_list, TopRatedMovieFragment(), null).commit()
+		fragmentTransactionTopRatedMovie.replace(R.id.top_rated_movies_activity, TopRatedMovieFragment(), null).commit()
 
-//		val supportFragmentManagerUpcomingMovie = supportFragmentManager
-//		val fragmentTransactionUpcomingMovie = supportFragmentManagerUpcomingMovie.beginTransaction()
-//		fragmentTransactionUpcomingMovie.replace(R.id.upcoming_movies_list, UpcomingMovieFragment(), null).commit()
+		val supportFragmentManagerUpcomingMovie = supportFragmentManager
+		val fragmentTransactionUpcomingMovie = supportFragmentManagerUpcomingMovie.beginTransaction()
+		fragmentTransactionUpcomingMovie.replace(R.id.upcoming_movies_activity, UpcomingMovieFragment(), null).commit()
 
 	}
 }

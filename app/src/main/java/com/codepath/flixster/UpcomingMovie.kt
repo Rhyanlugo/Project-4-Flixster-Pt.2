@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class UpcomingMovieResult(
 	@SerialName("results")
-	val results: List<TopRatedMovie>?
+	val results: List<UpcomingMovie>?
 )
 
 @Keep
@@ -30,7 +30,7 @@ data class UpcomingMovie(
 	val upcomingMovieVoteCount: Int?,
 
 	@SerialName("vote_average")
-	val upcomingMovieVoteAverage: Double?
+	val upcomingMovieVoteAverage: Float?
 ) : java.io.Serializable
 {
 	val moviePosterURL = "https://image.tmdb.org/t/p/w500${upcomingMoviePoster}"
